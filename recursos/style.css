@@ -1,0 +1,140 @@
+/* Reset básico moderno */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elimina scroll horizontal no deseado */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+  color: #fff;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* Elimina estilos de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Elimina decoraciones de enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/** Estilos header **/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fca311; /* color del logo */
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav ul li a {
+  font-size: 1rem;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #fca311;
+}
+
+
+
+/*** Estilos del contenedor principal **/
+#main {
+  padding: 2rem;
+  background-color: #121212;
+  color: #ffffff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.pelicula-card {
+  background: #1c1c1c;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.pelicula-card:hover {
+  transform: scale(1.05);
+}
+
+.pelicula-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.paginacion button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #d18100;;
+  color: white;
+  cursor: pointer;
+}
+
+.paginacion button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.indicador-pagina {
+  font-weight: bold;
+  font-size: 1.1rem;
+  align-self: center;
+}
+
+/*** Estilos del footer ***/  
+footer {
+  background-color: #1e1e1e;
+  color: #eee;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
