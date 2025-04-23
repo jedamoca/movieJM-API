@@ -138,3 +138,46 @@ footer {
   padding: 1rem 0;
   font-size: 0.9rem;
 }
+
+
+
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+}
