@@ -6,7 +6,7 @@ import { getPeliculasPopulares, getPeliculasProximas, getPeliculasTendencias } f
 export async function router() {
   if (location.hash === '' || location.hash === '#/') {
     const data = await getPeliculasTendencias(); // Página inicial
-    renderPeliculasTendencias(data, '⭐ Películas Populares');
+    renderPeliculasTendencias(data, '⭐ Películas Tendencia');
   } else if (location.hash === '#/tendencias') {
     const peliculas = await getPeliculasTendencias();
     renderPeliculasTendencias(peliculas, '🎬 Películas en Tendencia');
